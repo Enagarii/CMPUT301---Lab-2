@@ -6,37 +6,57 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginTop="20dp">
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:columnCount="4"
+        android:rowCount="10">
+
 
         <Button
             android:id="@+id/add_city"
+            android:text="ADD CITY"
             android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="Add City">
+            android:layout_columnSpan="2"
+            android:layout_column="0">
         </Button>
 
         <Button
             android:id="@+id/delete_city"
+            android:text="DELETE CITY"
             android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="Delete City">
+            android:layout_columnSpan="2"
+            android:layout_column="2">
         </Button>
 
+        <ListView
+            android:id="@+id/city_list"
+            android:layout_height="800dp"
+            android:layout_width="match_parent"
+            android:layout_columnSpan="4"
+            android:layout_rowSpan="8"
+            android:layout_column="0"
+            android:layout_row="1">
+        </ListView>
+
+        <EditText
+            android:id="@+id/input_city"
+            android:layout_columnSpan="3"
+            android:layout_width="300dp"
+            android:visibility="invisible">
+
+        </EditText>
+        <Button
+            android:id="@+id/confirm_add"
+            android:layout_columnSpan="1"
+            android:text="CONFIRM"
+            android:visibility="invisible">
+        </Button>
     </GridLayout>
 
-    <ListView
-        android:id="@+id/city_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
 
-    </ListView>
 
-    
 </LinearLayout>
